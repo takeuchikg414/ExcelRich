@@ -10,20 +10,20 @@ const navLinks = document.querySelectorAll('.nav-link');
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
 // Mobile menu toggle
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    
+
     // Animate hamburger icon
     const spans = navToggle.querySelectorAll('span');
     if (navMenu.classList.contains('active')) {
@@ -64,24 +64,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ========================================
-// Scroll Animations (Simple AOS alternative)
+// Scroll Animations (Smooth and Subtle)
 // ========================================
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -80px 0px'
 };
 
+// Track which elements have already been animated
+const animatedElements = new Set();
+
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0) translateX(0)';
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting && !animatedElements.has(entry.target)) {
+            // Add a subtle staggered delay based on position
+            const delay = index * 80; // Reduced from typical stagger
+
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) translateX(0)';
+            }, delay);
+
+            // Mark as animated so it doesn't repeat
+            animatedElements.add(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe all elements with data-aos attribute
+// Set initial state for elements with data-aos
 document.querySelectorAll('[data-aos]').forEach(el => {
+    el.style.opacity = '0';
+
+    const animationType = el.getAttribute('data-aos');
+    if (animationType === 'fade-up') {
+        el.style.transform = 'translateY(20px)';
+    } else if (animationType === 'fade-left') {
+        el.style.transform = 'translateX(20px)';
+    } else if (animationType === 'fade-right') {
+        el.style.transform = 'translateX(-20px)';
+    }
+
     observer.observe(el);
 });
 
@@ -93,7 +115,7 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form data
         const formData = {
             name: document.getElementById('name').value,
@@ -101,10 +123,10 @@ if (contactForm) {
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value
         };
-        
+
         // In a real application, you would send this data to a server
         // For now, we'll just show a success message
-        
+
         // Create success message
         const successMessage = document.createElement('div');
         successMessage.style.cssText = `
@@ -121,7 +143,7 @@ if (contactForm) {
             max-width: 500px;
             animation: fadeInUp 0.5s ease;
         `;
-        
+
         successMessage.innerHTML = `
             <h3 style="font-family: 'Orbitron', sans-serif; color: #FF1493; margin-bottom: 20px;">
                 送信完了
@@ -144,12 +166,12 @@ if (contactForm) {
                 閉じる
             </button>
         `;
-        
+
         document.body.appendChild(successMessage);
-        
+
         // Reset form
         contactForm.reset();
-        
+
         // Auto close after 5 seconds
         setTimeout(() => {
             if (successMessage.parentElement) {
@@ -165,12 +187,12 @@ if (contactForm) {
 function highlightActiveSection() {
     const sections = document.querySelectorAll('section[id]');
     const scrollPosition = window.pageYOffset + 150;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -202,11 +224,11 @@ if (heroBg) {
 // ========================================
 const serviceCards = document.querySelectorAll('.service-card');
 serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', function(e) {
+    card.addEventListener('mouseenter', function (e) {
         this.style.background = 'rgba(255, 20, 147, 0.05)';
     });
-    
-    card.addEventListener('mouseleave', function(e) {
+
+    card.addEventListener('mouseleave', function (e) {
         this.style.background = 'rgba(255, 255, 255, 0.02)';
     });
 });
@@ -229,32 +251,17 @@ if (window.innerWidth > 768) {
         opacity: 0;
     `;
     document.body.appendChild(cursorGlow);
-    
+
     document.addEventListener('mousemove', (e) => {
         cursorGlow.style.left = e.clientX + 'px';
         cursorGlow.style.top = e.clientY + 'px';
         cursorGlow.style.opacity = '1';
     });
-    
+
     document.addEventListener('mouseleave', () => {
         cursorGlow.style.opacity = '0';
     });
 }
-
-// ========================================
-// Form Input Animation
-// ========================================
-const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
-formInputs.forEach(input => {
-    input.addEventListener('focus', function() {
-        this.parentElement.style.transform = 'translateX(5px)';
-        this.parentElement.style.transition = 'transform 0.3s ease';
-    });
-    
-    input.addEventListener('blur', function() {
-        this.parentElement.style.transform = 'translateX(0)';
-    });
-});
 
 // ========================================
 // Performance: Lazy load images if any are added
@@ -272,7 +279,7 @@ if ('IntersectionObserver' in window) {
             }
         });
     });
-    
+
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
     });
@@ -284,10 +291,10 @@ if ('IntersectionObserver' in window) {
 window.addEventListener('load', () => {
     // Trigger initial animations
     document.body.classList.add('loaded');
-    
+
     // Set initial active navigation
     highlightActiveSection();
-    
+
     console.log('ExcelRich Website Loaded Successfully ⚡');
 });
 
