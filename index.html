@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExcelRich株式会社 | 楽しさは世界共通</title>
+    <meta name="description" content="東京でゴーカート体験、レンタカー、レッカーサービス、保険代理店を提供。国際的なチームで安全と楽しさを追求します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">ExcelRich</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#services" class="nav-link">SERVICES</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#recruit" class="nav-link">RECRUIT</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-label" data-aos="fade-up">REAL TOKYO EXPERIENCE</div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                楽しさは<br>
+                <span class="highlight">世界共通</span>
+            </h1>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                東京の街を駆け抜ける、忘れられない体験を。<br>
+                ゴーカートツアーから総合カーサービスまで、<br>
+                安全と楽しさを世界中のお客様にお届けします。
+            </p>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                <a href="#services" class="btn btn-primary">DISCOVER MORE</a>
+                <a href="#contact" class="btn btn-secondary">CONTACT US</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">SERVICES</div>
+                <h2 class="section-title">提供サービス</h2>
+                <p class="section-description">
+                    お客様のカーライフと東京体験を、4つのサービスでトータルサポートします。
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Go-Kart -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">🏎️</div>
+                    <h3 class="service-title">GO-KART TOUR</h3>
+                    <p class="service-subtitle">ゴーカート（レンタル・ツアー）</p>
+                    <p class="service-description">
+                        秋葉原、浅草、スカイツリーなど、東京の名所を公道ゴーカートで巡る特別な体験。レンタルのみも可能です。国際免許にも対応し、世界中からのお客様をお迎えしています。
+                    </p>
+                    <ul class="service-features">
+                        <li>プロガイド付きツアー</li>
+                        <li>多言語対応スタッフ</li>
+                        <li>写真・動画撮影サービス</li>
+                        <li>安全講習完備</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Car Rental -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">🚗</div>
+                    <h3 class="service-title">CAR RENTAL</h3>
+                    <p class="service-subtitle">レンタカーサービス</p>
+                    <p class="service-description">
+                        観光からビジネスまで、用途に合わせた車両をご用意。短期から長期まで柔軟に対応し、快適なドライブをサポートします。
+                    </p>
+                    <ul class="service-features">
+                        <li>多様な車種ラインナップ</li>
+                        <li>24時間サポート体制</li>
+                        <li>英語対応可能</li>
+                        <li>空港送迎オプション</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Towing -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">🚛</div>
+                    <h3 class="service-title">TOWING SERVICE</h3>
+                    <p class="service-subtitle">レッカー・ロードサービス</p>
+                    <p class="service-description">
+                        故障や事故時の緊急対応から、車両の移動まで迅速に対応。24時間365日、お客様の安心をサポートします。
+                    </p>
+                    <ul class="service-features">
+                        <li>24時間365日対応</li>
+                        <li>迅速な現場到着</li>
+                        <li>各種保険対応</li>
+                        <li>バッテリー上がり対応</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Insurance -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-title">INSURANCE</h3>
+                    <p class="service-subtitle">自動車保険代理店</p>
+                    <p class="service-description">
+                        お客様一人ひとりに最適な保険プランをご提案。事故対応から保険金請求まで、丁寧にサポートいたします。
+                    </p>
+                    <ul class="service-features">
+                        <li>プロの保険アドバイザー</li>
+                        <li>複数社比較可能</li>
+                        <li>事故時の手厚いサポート</li>
+                        <li>オンライン相談対応</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <div class="section-label">ABOUT US</div>
+                    <h2 class="section-title">会社概要</h2>
+                    <p class="about-text">
+                        ExcelRich株式会社は、東京を拠点に、ゴーカートツアーを中心とした総合カーサービスを展開しています。「楽しさは世界共通」をモットーに、国際色豊かなチームで、世界中からのお客様に安全で忘れられない体験を提供しています。
+                    </p>
+                    <p class="about-text">
+                        私たちは常に安全を最優先に考え、プロフェッショナルなサービスで、東京の新しい魅力を発信し続けます。
+                    </p>
+                    
+                    <div class="company-values">
+                        <div class="value-item">
+                            <div class="value-icon">🌍</div>
+                            <div>
+                                <h4>楽しさは世界共通</h4>
+                                <p>国籍や言語を超えた体験価値の提供</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">🛡️</div>
+                            <div>
+                                <h4>安全意識</h4>
+                                <p>お客様の安全を何よりも大切に</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-info" data-aos="fade-left">
+                    <div class="info-card">
+                        <h3>企業情報</h3>
+                        <dl class="info-list">
+                            <dt>会社名</dt>
+                            <dd>ExcelRich株式会社</dd>
+                            
+                            <dt>代表者</dt>
+                            <dd>横尾もとき</dd>
+                            
+                            <dt>所在地</dt>
+                            <dd>〒101-0032<br>東京都千代田区岩本町2-8-5</dd>
+                            
+                            <dt>資本金</dt>
+                            <dd>1,000万円</dd>
+                            
+                            <dt>事業内容</dt>
+                            <dd>
+                                ・ゴーカートレンタル・ツアー事業<br>
+                                ・レンタカー事業<br>
+                                ・レッカー・ロードサービス<br>
+                                ・自動車保険代理店
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruit Section -->
+    <section class="recruit" id="recruit">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">RECRUIT</div>
+                <h2 class="section-title">採用情報</h2>
+                <p class="section-description">
+                    国際的な環境で、挑戦したい気持ちを大切にする仲間を募集しています。
+                </p>
+            </div>
+
+            <div class="recruit-content">
+                <div class="recruit-message" data-aos="fade-up">
+                    <h3>私たちと一緒に働きませんか？</h3>
+                    <p>
+                        ExcelRichは、多様性を力に変える会社です。日本人スタッフはもちろん、世界各国からの仲間が集まり、それぞれの文化や経験を活かして働いています。
+                    </p>
+                    <p>
+                        未経験でも大丈夫。挑戦したいという気持ちがあれば、私たちが全力でサポートします。一緒に、東京から世界に笑顔を届けましょう。
+                    </p>
+                </div>
+
+                <div class="recruit-requirements" data-aos="fade-up" data-aos-delay="100">
+                    <h3>募集要項</h3>
+                    
+                    <div class="requirement-section">
+                        <h4>必須条件</h4>
+                        <ul>
+                            <li>18歳以上の方</li>
+                            <li>挑戦したいという気持ちをお持ちの方</li>
+                            <li>日本語で意思疎通ができる方（外国籍の方も歓迎）</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-section">
+                        <h4>歓迎条件</h4>
+                        <ul>
+                            <li>普通自動車運転免許をお持ちの方</li>
+                            <li>英語や他言語でのコミュニケーションができる方</li>
+                            <li>接客・サービス業の経験がある方</li>
+                        </ul>
+                    </div>
+
+                    <div class="requirement-section">
+                        <h4>求める人物像</h4>
+                        <ul>
+                            <li>安全意識が高く、責任感のある方</li>
+                            <li>チームワークを大切にできる方</li>
+                            <li>多様な文化を尊重し、楽しめる方</li>
+                            <li>お客様に笑顔を届けることが好きな方</li>
+                        </ul>
+                    </div>
+
+                    <div class="recruit-note">
+                        <p>💡 <strong>外国人の方も積極採用中！</strong></p>
+                        <p>日本語で意思疎通ができれば、国籍は問いません。多様なバックグラウンドを持つ仲間が活躍しています。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recruit-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="btn btn-primary">応募・お問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">CONTACT</div>
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-description">
+                    サービスに関するご質問、採用についてなど、お気軽にお問い合わせください。
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>所在地</h4>
+                            <p>〒101-0032<br>東京都千代田区岩本町2-8-5</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>メールアドレス</h4>
+                            <p><a href="mailto:info@excelrich.jp">info@excelrich.jp</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>営業時間</h4>
+                            <p>9:00 - 18:00（年中無休）<br>
+                            ※レッカーサービスは24時間対応</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-languages">
+                        <h4>対応言語</h4>
+                        <div class="language-tags">
+                            <span>🇯🇵 日本語</span>
+                            <span>🇬🇧 English</span>
+                            <span>🇨🇳 中文</span>
+                            <span>🇰🇷 한국어</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">お名前 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">お問い合わせ種別 *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">選択してください</option>
+                                <option value="gokart">ゴーカートツアーについて</option>
+                                <option value="rental">レンタカーについて</option>
+                                <option value="towing">レッカーサービスについて</option>
+                                <option value="insurance">保険について</option>
+                                <option value="recruit">採用について</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">メッセージ *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">ExcelRich</span>
+                </div>
+                <p class="footer-tagline">楽しさは世界共通</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ExcelRich株式会社 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
