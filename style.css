@@ -180,6 +180,12 @@ p {
     animation: pulse 2s ease-in-out infinite;
 }
 
+.logo-icon-img {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+}
+
 .logo-text {
     color: #FFFFFF;
 }
